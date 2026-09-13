@@ -1,0 +1,1300 @@
+{
+  "total": 28,
+  "passed": 28,
+  "failures": [],
+  "requests": [
+    {
+      "id": "openai-0",
+      "op": "build_request",
+      "provider": "openai",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 0: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 0: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 79,
+          "temperature": 0.0,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-1",
+      "op": "build_request",
+      "provider": "openai",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 1: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 1: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 80,
+          "temperature": 0.1,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-2",
+      "op": "build_request",
+      "provider": "openai",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 2: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 2: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 81,
+          "temperature": 0.2,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "response_format": {
+            "type": "json_schema",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              }
+            },
+            "name": "novel_schema"
+          }
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-3",
+      "op": "build_request",
+      "provider": "openai",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 3: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 3: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 82,
+          "temperature": 0.3,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-4",
+      "op": "build_request",
+      "provider": "openai",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 4: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 4: 🦀 / \\ ? & < >"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "parts": [
+              {
+                "type": "tool_call",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "input": {
+                  "city": "Oslo",
+                  "count": 7
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "parts": [
+              {
+                "type": "tool_result",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "59.91° N"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 83,
+          "temperature": 0.4,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-5",
+      "op": "build_request",
+      "provider": "openai",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 5: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 5: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 84,
+          "temperature": 0.5,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": true
+    },
+    {
+      "id": "openai-chat-0",
+      "op": "build_request",
+      "provider": "openai-chat",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 0: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 0: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 79,
+          "temperature": 0.0,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-chat-1",
+      "op": "build_request",
+      "provider": "openai-chat",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 1: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 1: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 80,
+          "temperature": 0.1,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-chat-2",
+      "op": "build_request",
+      "provider": "openai-chat",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 2: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 2: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 81,
+          "temperature": 0.2,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "response_format": {
+            "type": "json_schema",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              }
+            },
+            "name": "novel_schema"
+          }
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-chat-3",
+      "op": "build_request",
+      "provider": "openai-chat",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 3: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 3: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 82,
+          "temperature": 0.3,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-chat-4",
+      "op": "build_request",
+      "provider": "openai-chat",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 4: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 4: 🦀 / \\ ? & < >"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "parts": [
+              {
+                "type": "tool_call",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "input": {
+                  "city": "Oslo",
+                  "count": 7
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "parts": [
+              {
+                "type": "tool_result",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "59.91° N"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 83,
+          "temperature": 0.4,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "openai-chat-5",
+      "op": "build_request",
+      "provider": "openai-chat",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gpt-4.1",
+        "system": "Novel differential instruction 5: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 5: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 84,
+          "temperature": 0.5,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": true
+    },
+    {
+      "id": "anthropic-0",
+      "op": "build_request",
+      "provider": "anthropic",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "claude-sonnet-4-5",
+        "system": "Novel differential instruction 0: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 0: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 79,
+          "temperature": 0.0,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "anthropic-1",
+      "op": "build_request",
+      "provider": "anthropic",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "claude-sonnet-4-5",
+        "system": "Novel differential instruction 1: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 1: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 80,
+          "temperature": 0.1,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "anthropic-2",
+      "op": "build_request",
+      "provider": "anthropic",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "claude-sonnet-4-5",
+        "system": "Novel differential instruction 2: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 2: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 81,
+          "temperature": 0.2,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "response_format": {
+            "type": "json_schema",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              }
+            },
+            "name": "novel_schema"
+          }
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "anthropic-3",
+      "op": "build_request",
+      "provider": "anthropic",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "claude-sonnet-4-5",
+        "system": "Novel differential instruction 3: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 3: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 82,
+          "temperature": 0.3,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "anthropic-4",
+      "op": "build_request",
+      "provider": "anthropic",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "claude-sonnet-4-5",
+        "system": "Novel differential instruction 4: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 4: 🦀 / \\ ? & < >"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "parts": [
+              {
+                "type": "tool_call",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "input": {
+                  "city": "Oslo",
+                  "count": 7
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "parts": [
+              {
+                "type": "tool_result",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "59.91° N"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 83,
+          "temperature": 0.4,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "anthropic-5",
+      "op": "build_request",
+      "provider": "anthropic",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "claude-sonnet-4-5",
+        "system": "Novel differential instruction 5: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 5: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 84,
+          "temperature": 0.5,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": true
+    },
+    {
+      "id": "gemini-0",
+      "op": "build_request",
+      "provider": "gemini",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gemini-2.5-flash",
+        "system": "Novel differential instruction 0: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 0: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 79,
+          "temperature": 0.0,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "gemini-1",
+      "op": "build_request",
+      "provider": "gemini",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gemini-2.5-flash",
+        "system": "Novel differential instruction 1: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 1: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 80,
+          "temperature": 0.1,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "gemini-2",
+      "op": "build_request",
+      "provider": "gemini",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gemini-2.5-flash",
+        "system": "Novel differential instruction 2: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 2: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 81,
+          "temperature": 0.2,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "response_format": {
+            "type": "json_schema",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string"
+                }
+              }
+            },
+            "name": "novel_schema"
+          }
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "gemini-3",
+      "op": "build_request",
+      "provider": "gemini",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gemini-2.5-flash",
+        "system": "Novel differential instruction 3: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 3: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 82,
+          "temperature": 0.3,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": false
+    },
+    {
+      "id": "gemini-4",
+      "op": "build_request",
+      "provider": "gemini",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gemini-2.5-flash",
+        "system": "Novel differential instruction 4: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 4: 🦀 / \\ ? & < >"
+              }
+            ]
+          },
+          {
+            "role": "assistant",
+            "parts": [
+              {
+                "type": "tool_call",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "input": {
+                  "city": "Oslo",
+                  "count": 7
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "parts": [
+              {
+                "type": "tool_result",
+                "id": "unique-call",
+                "name": "locate_unique",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "59.91° N"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 83,
+          "temperature": 0.4,
+          "stop": [
+            "END-NOVEL"
+          ]
+        }
+      },
+      "stream": false
+    },
+    {
+      "id": "gemini-5",
+      "op": "build_request",
+      "provider": "gemini",
+      "api_key": "differential-placeholder",
+      "canonical_request": {
+        "model": "gemini-2.5-flash",
+        "system": "Novel differential instruction 5: keep café and 東京.",
+        "messages": [
+          {
+            "role": "user",
+            "parts": [
+              {
+                "type": "text",
+                "text": "Independent sample 5: 🦀 / \\ ? & < >"
+              }
+            ]
+          }
+        ],
+        "config": {
+          "max_tokens": 84,
+          "temperature": 0.5,
+          "stop": [
+            "END-NOVEL"
+          ],
+          "tool_choice": {
+            "mode": "required",
+            "allowed": [
+              "locate_unique"
+            ],
+            "parallel": false
+          }
+        },
+        "tools": [
+          {
+            "type": "function",
+            "name": "locate_unique",
+            "description": "Find a point",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "city"
+              ]
+            }
+          }
+        ]
+      },
+      "stream": true
+    },
+    {
+      "id": "openai-chat-ingest-novel",
+      "op": "ingest_openai_chat",
+      "provider": "openai-chat",
+      "body": {
+        "model": "novel-model",
+        "messages": [
+          {
+            "role": "system",
+            "content": "A fresh prompt"
+          },
+          {
+            "role": "user",
+            "content": "A new migration sample"
+          }
+        ],
+        "temperature": 0.375,
+        "seed": 8703,
+        "metadata": {
+          "test": "independent"
+        }
+      }
+    },
+    {
+      "id": "groq-ingest-novel",
+      "op": "ingest_openai_chat",
+      "provider": "groq",
+      "body": {
+        "model": "novel-model",
+        "messages": [
+          {
+            "role": "system",
+            "content": "A fresh prompt"
+          },
+          {
+            "role": "user",
+            "content": "A new migration sample"
+          }
+        ],
+        "temperature": 0.375,
+        "seed": 8703,
+        "metadata": {
+          "test": "independent"
+        }
+      }
+    },
+    {
+      "id": "deepseek-ingest-novel",
+      "op": "ingest_openai_chat",
+      "provider": "deepseek",
+      "body": {
+        "model": "novel-model",
+        "messages": [
+          {
+            "role": "system",
+            "content": "A fresh prompt"
+          },
+          {
+            "role": "user",
+            "content": "A new migration sample"
+          }
+        ],
+        "temperature": 0.375,
+        "seed": 8703,
+        "metadata": {
+          "test": "independent"
+        }
+      }
+    },
+    {
+      "id": "openrouter-ingest-novel",
+      "op": "ingest_openai_chat",
+      "provider": "openrouter",
+      "body": {
+        "model": "novel-model",
+        "messages": [
+          {
+            "role": "system",
+            "content": "A fresh prompt"
+          },
+          {
+            "role": "user",
+            "content": "A new migration sample"
+          }
+        ],
+        "temperature": 0.375,
+        "seed": 8703,
+        "metadata": {
+          "test": "independent"
+        }
+      }
+    }
+  ],
+  "python_revision": "3bbbd3ee1bab40a1a61cc74db120c4a8eb7eb22b"
+}

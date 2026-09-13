@@ -1,0 +1,76 @@
+Test Suite 'All tests' started at 2026-09-12 19:34:29.031
+Test Suite 'debug.xctest' started at 2026-09-12 19:34:29.033
+Test Suite 'AuthTests' started at 2026-09-12 19:34:29.033
+Test Case 'AuthTests.testAWSWebIdentityParsesNamespacedSTSAndNoUnsignedFallback' started at 2026-09-12 19:34:29.033
+Test Case 'AuthTests.testAWSWebIdentityParsesNamespacedSTSAndNoUnsignedFallback' passed (0.036 seconds)
+Test Case 'AuthTests.testAzureAndGoogleTokenChainsUseInjectedTransport' started at 2026-09-12 19:34:29.069
+Test Case 'AuthTests.testAzureAndGoogleTokenChainsUseInjectedTransport' passed (0.003 seconds)
+Test Case 'AuthTests.testCloudCredentialCacheCoalescesAndExpires' started at 2026-09-12 19:34:29.072
+Test Case 'AuthTests.testCloudCredentialCacheCoalescesAndExpires' passed (0.063 seconds)
+Test Case 'AuthTests.testConcurrentRefreshAtomicPermissionsAndUnknownFields' started at 2026-09-12 19:34:29.134
+Test Case 'AuthTests.testConcurrentRefreshAtomicPermissionsAndUnknownFields' passed (0.153 seconds)
+Test Case 'AuthTests.testLockTimeoutAndSymlinkRejected' started at 2026-09-12 19:34:29.288
+Test Case 'AuthTests.testLockTimeoutAndSymlinkRejected' passed (0.051 seconds)
+Test Case 'AuthTests.testNativeProcessArgumentsTimeoutAndCancellation' started at 2026-09-12 19:34:29.339
+Test Case 'AuthTests.testNativeProcessArgumentsTimeoutAndCancellation' passed (0.142 seconds)
+Test Case 'AuthTests.testPKCEKnownChallengeAndDeviceSlowDown' started at 2026-09-12 19:34:29.482
+Test Case 'AuthTests.testPKCEKnownChallengeAndDeviceSlowDown' passed (0.001 seconds)
+Test Case 'AuthTests.testRefreshFailureDoesNotOverwriteOrDisclose' started at 2026-09-12 19:34:29.483
+Test Case 'AuthTests.testRefreshFailureDoesNotOverwriteOrDisclose' passed (0.001 seconds)
+Test Suite 'AuthTests' passed at 2026-09-12 19:34:29.484
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.451 (0.451) seconds
+Test Suite 'CoreTests' started at 2026-09-12 19:34:29.485
+Test Case 'CoreTests.testCacheSuffixRetainsPrefixAndRestrictsOverrides' started at 2026-09-12 19:34:29.485
+Test Case 'CoreTests.testCacheSuffixRetainsPrefixAndRestrictsOverrides' passed (0.011 seconds)
+Test Case 'CoreTests.testCredentialCallbackResolvesOncePerRequest' started at 2026-09-12 19:34:29.496
+Test Case 'CoreTests.testCredentialCallbackResolvesOncePerRequest' passed (0.003 seconds)
+Test Case 'CoreTests.testLargeCanonicalIntegersNeverRoundOrOverflow' started at 2026-09-12 19:34:29.499
+Test Case 'CoreTests.testLargeCanonicalIntegersNeverRoundOrOverflow' passed (0.001 seconds)
+Test Case 'CoreTests.testLiveTurnToolBoundaryAndAudioConsistency' started at 2026-09-12 19:34:29.500
+Test Case 'CoreTests.testLiveTurnToolBoundaryAndAudioConsistency' passed (0.002 seconds)
+Test Case 'CoreTests.testRouterMigrationAndMixedBatchRejection' started at 2026-09-12 19:34:29.502
+Test Case 'CoreTests.testRouterMigrationAndMixedBatchRejection' passed (0.008 seconds)
+Test Case 'CoreTests.testSSEFragmentationLimitsAndUsageUnknowns' started at 2026-09-12 19:34:29.510
+Test Case 'CoreTests.testSSEFragmentationLimitsAndUsageUnknowns' passed (0.001 seconds)
+Test Case 'CoreTests.testTypedInitializersAndDecoderAgree' started at 2026-09-12 19:34:29.511
+Test Case 'CoreTests.testTypedInitializersAndDecoderAgree' passed (0.004 seconds)
+Test Case 'CoreTests.testTypedRoundtripOpaqueNumbersAndUnicode' started at 2026-09-12 19:34:29.515
+Test Case 'CoreTests.testTypedRoundtripOpaqueNumbersAndUnicode' passed (0.003 seconds)
+Test Suite 'CoreTests' passed at 2026-09-12 19:34:29.518
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.034 (0.034) seconds
+Test Suite 'NetworkTests' started at 2026-09-12 19:34:29.518
+Test Case 'NetworkTests.testNativeWebSocketHandshakePingAndFragmentation' started at 2026-09-12 19:34:29.518
+Test Case 'NetworkTests.testNativeWebSocketHandshakePingAndFragmentation' passed (0.006 seconds)
+Test Case 'NetworkTests.testNetworkEarlyCloseUnblocksReader' started at 2026-09-12 19:34:29.524
+Test Case 'NetworkTests.testNetworkEarlyCloseUnblocksReader' passed (0.074 seconds)
+Test Case 'NetworkTests.testNetworkTruncationCannotBecomeSuccessfulCompletion' started at 2026-09-12 19:34:29.598
+Test Case 'NetworkTests.testNetworkTruncationCannotBecomeSuccessfulCompletion' passed (0.021 seconds)
+Test Case 'NetworkTests.testURLSessionCompleteAndIncrementalSSEOverRealSocket' started at 2026-09-12 19:34:29.619
+Test Case 'NetworkTests.testURLSessionCompleteAndIncrementalSSEOverRealSocket' passed (0.083 seconds)
+Test Case 'NetworkTests.testWebSocketRejectsMalformedFramesAndUpgrade' started at 2026-09-12 19:34:29.702
+Test Case 'NetworkTests.testWebSocketRejectsMalformedFramesAndUpgrade' passed (0.009 seconds)
+Test Suite 'NetworkTests' passed at 2026-09-12 19:34:29.711
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.193 (0.193) seconds
+Test Suite 'StreamTests' started at 2026-09-12 19:34:29.711
+Test Case 'StreamTests.testEarlyCloseCancelsProviderAndSingleReaderIsEnforced' started at 2026-09-12 19:34:29.711
+Test Case 'StreamTests.testEarlyCloseCancelsProviderAndSingleReaderIsEnforced' passed (0.005 seconds)
+Test Case 'StreamTests.testGeminiSetupMovesAPIKeyAndContextClosesOnError' started at 2026-09-12 19:34:29.717
+Test Case 'StreamTests.testGeminiSetupMovesAPIKeyAndContextClosesOnError' passed (0.001 seconds)
+Test Case 'StreamTests.testLiveReceiveCancellationClosesSocket' started at 2026-09-12 19:34:29.718
+Test Case 'StreamTests.testLiveReceiveCancellationClosesSocket' passed (0.021 seconds)
+Test Case 'StreamTests.testLiveTurnStopsForToolAndLeavesNextBoundary' started at 2026-09-12 19:34:29.739
+Test Case 'StreamTests.testLiveTurnStopsForToolAndLeavesNextBoundary' passed (0.003 seconds)
+Test Case 'StreamTests.testMissingEndAndAfterEndExposePartial' started at 2026-09-12 19:34:29.742
+Test Case 'StreamTests.testMissingEndAndAfterEndExposePartial' passed (0.007 seconds)
+Test Case 'StreamTests.testTaskCancellationStopsProvider' started at 2026-09-12 19:34:29.750
+Test Case 'StreamTests.testTaskCancellationStopsProvider' passed (0.005 seconds)
+Test Case 'StreamTests.testTextIterationAssemblesResultAndPreservesCleanupFailure' started at 2026-09-12 19:34:29.754
+Test Case 'StreamTests.testTextIterationAssemblesResultAndPreservesCleanupFailure' passed (0.004 seconds)
+Test Case 'StreamTests.testUnnamedToolDoesNotInventName' started at 2026-09-12 19:34:29.758
+Test Case 'StreamTests.testUnnamedToolDoesNotInventName' passed (0.003 seconds)
+Test Suite 'StreamTests' passed at 2026-09-12 19:34:29.762
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.05 (0.05) seconds
+Test Suite 'debug.xctest' passed at 2026-09-12 19:34:29.762
+	 Executed 29 tests, with 0 failures (0 unexpected) in 0.728 (0.728) seconds
+Test Suite 'All tests' passed at 2026-09-12 19:34:29.762
+	 Executed 29 tests, with 0 failures (0 unexpected) in 0.728 (0.728) seconds

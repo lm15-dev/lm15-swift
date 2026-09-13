@@ -1,0 +1,58 @@
+name: LM15 Swift
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '6.2.4'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Locate package
+        shell: bash
+        run: |
+          if [ -f ports/lm15-swift/Package.swift ]; then
+            echo 'LM15_PACKAGE=ports/lm15-swift' >> "$GITHUB_ENV"
+          else
+            echo 'LM15_PACKAGE=.' >> "$GITHUB_ENV"
+          fi
+      - name: Native tests and example
+        shell: bash
+        run: |
+          swift test --package-path "$LM15_PACKAGE"
+          swift run --package-path "$LM15_PACKAGE" LM15Example
+      - name: Read contract pin
+        shell: bash
+        run: echo "LM15_PIN=$(cat "$LM15_PACKAGE/CONTRACT_PIN")" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+        with:
+          repository: lm15-dev/lm15-contract
+          ref: ${{ env.LM15_PIN }}
+          path: .oracle-contract
+      - uses: actions/checkout@v4
+        with:
+          repository: lm15-dev/lm15-python
+          ref: 3bbbd3ee1bab40a1a61cc74db120c4a8eb7eb22b
+          path: .oracle-python
+      - name: Original harness and independent requests
+        shell: bash
+        run: |
+          python3 "$LM15_PACKAGE/tools/check_contract.py" --contract "$GITHUB_WORKSPACE/.oracle-contract" --direction all
+          python3 "$LM15_PACKAGE/tools/differential.py" --python-repo "$GITHUB_WORKSPACE/.oracle-python"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: swift-validation-${{ matrix.os }}
+          path: ${{ env.LM15_PACKAGE }}/tmp/
